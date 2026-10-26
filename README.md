@@ -68,6 +68,47 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 
 </ol>
 
+# program:
+```
+from collections import deque, defaultdict
+
+def bfs(graph, start, visited, path):
+    queue = deque()
+    path.append(start)
+    queue.append(start)
+    visited[start] = True
+
+    while queue:
+        node = queue.popleft()
+
+        for neighbour in graph[node]:
+            if not visited[neighbour]:
+                path.append(neighbour)
+                queue.append(neighbour)
+                visited[neighbour] = True
+
+    return path
+
+graph = defaultdict(list)
+
+n, e = map(int, input("Enter vertices and edges: ").split())
+
+for i in range(e):
+    u, v = input().split()
+    graph[u].append(v)
+    graph[v].append(u)
+
+start = input("Enter starting node: ")
+
+path = []
+visited = defaultdict(bool)
+
+print("BFS Traversal:", bfs(graph, start, visited, path))
+```
+# output:
+<img width="583" height="201" alt="WhatsApp Image 2026-10-26 at 8 06 12 AM (1)" src="https://github.com/user-attachments/assets/e3377c19-a185-4215-8580-a67911460a62" />
+
+
 <hr>
 <h3>Sample Input</h3>
 <hr>
