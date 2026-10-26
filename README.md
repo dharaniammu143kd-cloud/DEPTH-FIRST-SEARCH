@@ -104,10 +104,10 @@ path = []
 visited = defaultdict(bool)
 
 print("BFS Traversal:", bfs(graph, start, visited, path))
+
 ```
 # output:
-<img width="583" height="201" alt="WhatsApp Image 2026-10-26 at 8 06 12 AM (1)" src="https://github.com/user-attachments/assets/e3377c19-a185-4215-8580-a67911460a62" />
-
+<img width="641" height="288" alt="image" src="https://github.com/user-attachments/assets/2cb2c28a-9621-4924-9ecb-ad98bf9c7887" />
 
 <hr>
 <h3>Sample Input</h3>
